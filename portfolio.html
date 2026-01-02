@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <script src="i18n.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title data-i18n="meta.title">Портфолио | Mykhailo Hryshchenko</title>
+    <meta name="description" data-i18n="meta.description" content="Портфолио YouTube обложек. Gaming, Tech, Lifestyle, Business и другие ниши.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/7Pmmx4yf/image-2025-12-05-05-09-53.png">
+    <meta name="theme-color" content="#030303">
+    <style>
+        .page-header { padding: 6rem 0 2rem; text-align: center; }
+        .page-title { font-family: 'Unbounded', sans-serif; font-size: clamp(1.5rem, 5vw, 2.5rem); font-weight: 700; margin-bottom: 0.5rem; }
+        .page-subtitle { color: var(--text-muted); font-size: 0.95rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; transition: color 0.3s ease; }
+        .back-link:hover { color: var(--accent); }
+        .portfolio-section { padding: 2rem 0 4rem; }
+    </style>
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+    <div class="gradient-mesh"></div>
+    <div class="noise-overlay"></div>
+    <div class="grid-pattern"></div>
+    <div class="bg-orbs"><div class="bg-orb bg-orb-1"></div><div class="bg-orb bg-orb-2"></div><div class="bg-orb bg-orb-3"></div></div>
+    <div class="particles" id="particles"></div>
+
+    <header class="header" id="header">
+        <div class="container header-inner" style="justify-content: center;">
+            <a href="index.html" class="logo" data-magnetic>
+                <img src="https://i.postimg.cc/MTvC92Ng/image-2025-12-05-05-09-53.png" alt="Genial Design" class="logo-img">
+                <span class="logo-text">Genial<span class="accent">Design</span></span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title" data-i18n="portfolio.pageTitle">Портфолио</h1>
+                <p class="page-subtitle"><span data-i18n="portfolio.pageSubtitle">Любая ниша. Один результат —</span> <span class="gradient-text" data-i18n="portfolio.pageSubtitleAccent">рост CTR</span></p>
+            </div>
+        </section>
+
+        <section class="portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="portfolio-header reveal">
+                    <div class="portfolio-filters-wrapper">
+                        <div class="portfolio-filters" id="portfolio-filters">
+                            <button class="filter-btn active" data-filter="all" data-i18n="portfolio.filterAll">Все</button>
+                            <button class="filter-btn" data-filter="gaming" data-i18n="portfolio.filterGaming">Gaming</button>
+                            <button class="filter-btn" data-filter="tech" data-i18n="portfolio.filterTech">Tech</button>
+                            <button class="filter-btn" data-filter="lifestyle" data-i18n="portfolio.filterLifestyle">Lifestyle</button>
+                            <button class="filter-btn" data-filter="business" data-i18n="portfolio.filterBusiness">Бизнес</button>
+                            <button class="filter-btn" data-filter="history" data-i18n="portfolio.filterHistory">История</button>
+                            <button class="filter-btn" data-filter="health" data-i18n="portfolio.filterHealth">Здоровье</button>
+                            <button class="filter-btn" data-filter="psychology" data-i18n="portfolio.filterPsychology">Психология</button>
+                            <button class="filter-btn" data-filter="other" data-i18n="portfolio.filterOther">Другое</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-grid reveal" id="portfolio-grid">
+                    <!-- Gaming -->
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/веном2.jpg" data-full="portfolio/Gaming/веном2.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/ЗНИЖКИ ЛІТО.jpg" data-full="portfolio/Gaming/ЗНИЖКИ ЛІТО.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/РЕПО (3).jpg" data-full="portfolio/Gaming/РЕПО (3).jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/ЗОМБИ АПОКАЛИПСИС ПРЕВЬЮ.jpg" data-full="portfolio/Gaming/ЗОМБИ АПОКАЛИПСИС ПРЕВЬЮ.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Путешествие без компромиссов Metro Exodus.jpg" data-full="portfolio/Gaming/Путешествие без компромиссов Metro Exodus.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/battlefield 6.jpg" data-full="portfolio/Gaming/battlefield 6.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/24 часа.jpg" data-full="portfolio/Gaming/24 часа.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Адреналин на пределе.jpg" data-full="portfolio/Gaming/Адреналин на пределе.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Антиматерия.jpg" data-full="portfolio/Gaming/Антиматерия.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/беги, дурак.jpg" data-full="portfolio/Gaming/беги, дурак.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/БЕРИ ПАУЗУ! ТАК ЗАМІНЯЮТЬ ПРОФІ.jpg" data-full="portfolio/Gaming/БЕРИ ПАУЗУ! ТАК ЗАМІНЯЮТЬ ПРОФІ.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Бінокль.jpg" data-full="portfolio/Gaming/Бінокль.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/ВЫБИЛ ЭКСКЛЮЗИВ.jpg" data-full="portfolio/Gaming/ВЫБИЛ ЭКСКЛЮЗИВ.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Ганзона под угрозой.jpg" data-full="portfolio/Gaming/Ганзона под угрозой.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/забрали особняк.jpg" data-full="portfolio/Gaming/забрали особняк.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Интервью.jpg" data-full="portfolio/Gaming/Интервью.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Исповедь новичка.jpg" data-full="portfolio/Gaming/Исповедь новичка.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Лучший Гайд На Пролетки.jpg" data-full="portfolio/Gaming/Лучший Гайд На Пролетки.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/мною управляет GPT.jpg" data-full="portfolio/Gaming/мною управляет GPT.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/на руле 2.jpg" data-full="portfolio/Gaming/на руле 2.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/ОБМАНУТЬ КАЗИНО.jpg" data-full="portfolio/Gaming/ОБМАНУТЬ КАЗИНО.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/почему повестка не работает.jpg" data-full="portfolio/Gaming/почему повестка не работает.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Пранкую NPC.jpg" data-full="portfolio/Gaming/Пранкую NPC.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/СВЕРХМАГНИТ2.jpg" data-full="portfolio/Gaming/СВЕРХМАГНИТ2.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Сколько законов нарушили2.jpg" data-full="portfolio/Gaming/Сколько законов нарушили2.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/ТАКТИКА 16 0.jpg" data-full="portfolio/Gaming/ТАКТИКА 16 0.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Теперь ты мой.jpg" data-full="portfolio/Gaming/Теперь ты мой.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Черная дыра.jpg" data-full="portfolio/Gaming/Черная дыра.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/ШИЗОБАЛДЁЖ.jpg" data-full="portfolio/Gaming/ШИЗОБАЛДЁЖ.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Fix your tilt3.jpg" data-full="portfolio/Gaming/Fix your tilt3.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+                    <div class="portfolio-item" data-category="gaming"><img src="portfolio/thumbnails/Gaming/Welcome to.jpg" data-full="portfolio/Gaming/Welcome to.jpg" loading="lazy" alt="Gaming"><div class="portfolio-overlay"><span class="portfolio-category">Gaming</span></div></div>
+
+                    <!-- Tech -->
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/XIAOMI ВАУ2.jpg" data-full="portfolio/TECH/XIAOMI ВАУ2.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/xbox series x vs ps5 pro5.jpg" data-full="portfolio/TECH/xbox series x vs ps5 pro5.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/Land Rover Discovery Sport.jpg" data-full="portfolio/TECH/Land Rover Discovery Sport.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/ВАМ ВРУТ.jpg" data-full="portfolio/TECH/ВАМ ВРУТ.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/в 100000 раз больше.jpg" data-full="portfolio/TECH/в 100000 раз больше.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/Курс по Next js, робимо клон YouTube_.jpg" data-full="portfolio/TECH/Курс по Next js, робимо клон YouTube_.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/СМАРТФОНЫ стали НАМНОГО ЛУЧШЕ, а вы и НЕ ЗАМЕТИЛИ2.jpg" data-full="portfolio/TECH/СМАРТФОНЫ стали НАМНОГО ЛУЧШЕ, а вы и НЕ ЗАМЕТИЛИ2.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/ТВОРЧЕСТВО, ИГРЫ, ОФИС, СТУДЕНТ.jpg" data-full="portfolio/TECH/ТВОРЧЕСТВО, ИГРЫ, ОФИС, СТУДЕНТ.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/ТОП 5 КРОСОВЕРІВ ДО 20000$.jpg" data-full="portfolio/TECH/ТОП 5 КРОСОВЕРІВ ДО 20000$.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/Es este titanio la clave para no perder tus criptos.jpg" data-full="portfolio/TECH/Es este titanio la clave para no perder tus criptos.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/Nos intentan timar.jpg" data-full="portfolio/TECH/Nos intentan timar.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/SRT-файл.jpg" data-full="portfolio/TECH/SRT-файл.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+                    <div class="portfolio-item" data-category="tech"><img src="portfolio/thumbnails/TECH/Todo el proceso en un vídeo.jpg" data-full="portfolio/TECH/Todo el proceso en un vídeo.jpg" loading="lazy" alt="Tech"><div class="portfolio-overlay"><span class="portfolio-category">Tech</span></div></div>
+
+                    <!-- Lifestyle -->
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/24 ГОДИНИ У ЛІСІ.jpg" data-full="portfolio/Lifestyle/24 ГОДИНИ У ЛІСІ.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/КООРДИНАТИ В ПЕКЛО.jpg" data-full="portfolio/Lifestyle/КООРДИНАТИ В ПЕКЛО.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Ніж Джона Рембо.jpg" data-full="portfolio/Lifestyle/Ніж Джона Рембо.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Раніше (не) було краще.jpg" data-full="portfolio/Lifestyle/Раніше (не) було краще.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Що там по Десні.jpg" data-full="portfolio/Lifestyle/Що там по Десні.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/BMW, Rolex и концерт Макса Коржа — исполняю мечты подписчиков2 2.jpg" data-full="portfolio/Lifestyle/BMW, Rolex и концерт Макса Коржа — исполняю мечты подписчиков2 2.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Еда Вьетнама.jpg" data-full="portfolio/Lifestyle/Еда Вьетнама.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Mercedes-Benz SL500 R129.jpg" data-full="portfolio/Lifestyle/Mercedes-Benz SL500 R129.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Формула Хита.jpg" data-full="portfolio/Lifestyle/Формула Хита.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/10 лучших блюд которые я пробовал.jpg" data-full="portfolio/Lifestyle/10 лучших блюд которые я пробовал.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/5 Bicycles That Will Blow Your Mind.jpg" data-full="portfolio/Lifestyle/5 Bicycles That Will Blow Your Mind.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/було стало.jpg" data-full="portfolio/Lifestyle/було стало.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/встретил РЕАЛЬНОГО Бледного Гостя.jpg" data-full="portfolio/Lifestyle/встретил РЕАЛЬНОГО Бледного Гостя.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/ґайд НА КОСПЛЕЙ.jpg" data-full="portfolio/Lifestyle/ґайд НА КОСПЛЕЙ.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/еволюція старалась, а ти …3.jpg" data-full="portfolio/Lifestyle/еволюція старалась, а ти …3.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/За что меня судять в сша2.jpg" data-full="portfolio/Lifestyle/За что меня судять в сша2.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/искусство ошибаться.jpg" data-full="portfolio/Lifestyle/искусство ошибаться.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Как правильно ездить с двойкой.jpg" data-full="portfolio/Lifestyle/Как правильно ездить с двойкой.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/слева сниматься в кино, справа стать бомжом.jpg" data-full="portfolio/Lifestyle/слева сниматься в кино, справа стать бомжом.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/траки - все.jpg" data-full="portfolio/Lifestyle/траки - все.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Трекер AirTag в посылке из Китая.jpg" data-full="portfolio/Lifestyle/Трекер AirTag в посылке из Китая.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/треки из телеги.jpg" data-full="portfolio/Lifestyle/треки из телеги.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/туалеты.jpg" data-full="portfolio/Lifestyle/туалеты.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Ты хочешь изменить свою жизнь.jpg" data-full="portfolio/Lifestyle/Ты хочешь изменить свою жизнь.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/УЩЕЛЬЕ.jpg" data-full="portfolio/Lifestyle/УЩЕЛЬЕ.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/Хочете щуку на лайт.jpg" data-full="portfolio/Lifestyle/Хочете щуку на лайт.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+                    <div class="portfolio-item" data-category="lifestyle"><img src="portfolio/thumbnails/Lifestyle/POWER.jpg" data-full="portfolio/Lifestyle/POWER.jpg" loading="lazy" alt="Lifestyle"><div class="portfolio-overlay"><span class="portfolio-category">Lifestyle</span></div></div>
+
+                    <!-- Business -->
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/ЦЬОГО ТОБІ НЕ СКАЖУТЬ!.jpg" data-full="portfolio/business/ЦЬОГО ТОБІ НЕ СКАЖУТЬ!.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/Ты потеряешь все3.jpg" data-full="portfolio/business/Ты потеряешь все3.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/ГДЕ ТОРГОВАТЬ В 2025.jpg" data-full="portfolio/business/ГДЕ ТОРГОВАТЬ В 2025.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/Пузырь в США.jpg" data-full="portfolio/business/Пузырь в США.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/скам в телеграм.jpg" data-full="portfolio/business/скам в телеграм.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/-Неравенство в мире становится только хуже!.jpg" data-full="portfolio/business/-Неравенство в мире становится только хуже!.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/5 главных критериев.jpg" data-full="portfolio/business/5 главных критериев.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/БЕЗ ТРЕЙДИНГА.jpg" data-full="portfolio/business/БЕЗ ТРЕЙДИНГА.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/КАК ПЕРЕЕХАТЬ В ДУБАЙ подробный гайд.jpg" data-full="portfolio/business/КАК ПЕРЕЕХАТЬ В ДУБАЙ подробный гайд.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/мк.jpg" data-full="portfolio/business/мк.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/Что будет если твой ЕТФ обанкротится и исчезнет.jpg" data-full="portfolio/business/Что будет если твой ЕТФ обанкротится и исчезнет.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/day 0 и day 30.jpg" data-full="portfolio/business/day 0 и day 30.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+                    <div class="portfolio-item" data-category="business"><img src="portfolio/thumbnails/business/Winning products for shopify.jpg" data-full="portfolio/business/Winning products for shopify.jpg" loading="lazy" alt="Бизнес"><div class="portfolio-overlay"><span class="portfolio-category">Бизнес</span></div></div>
+
+                    <!-- History -->
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/34 удари ножем.jpg" data-full="portfolio/history/34 удари ножем.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/ВІД КОХАННЯ ДО СТРАТИ.jpg" data-full="portfolio/history/ВІД КОХАННЯ ДО СТРАТИ.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/жахливий інтернет.jpg" data-full="portfolio/history/жахливий інтернет.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/масони.jpg" data-full="portfolio/history/масони.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/ПОЛЬСЬКИЙ МОНСТР.jpg" data-full="portfolio/history/ПОЛЬСЬКИЙ МОНСТР.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Сухий закон2.jpg" data-full="portfolio/history/Сухий закон2.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/ТЕБЕ З'ЇДЯТЬ. ПО ЧАСТИНАХ_.jpg" data-full="portfolio/history/ТЕБЕ З'ЇДЯТЬ. ПО ЧАСТИНАХ_.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Церква = Шпигунська Мережа.jpg" data-full="portfolio/history/Церква = Шпигунська Мережа.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/ШІ ВБИВАЄ... І ТАНЦЮЄ.jpg" data-full="portfolio/history/ШІ ВБИВАЄ... І ТАНЦЮЄ.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/731.jpg" data-full="portfolio/history/731.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/СОМАЛІЙСЬКІ ПІРАТИ.jpg" data-full="portfolio/history/СОМАЛІЙСЬКІ ПІРАТИ.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/50 ЖЕРТВ.jpg" data-full="portfolio/history/50 ЖЕРТВ.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Выживет только элита.jpg" data-full="portfolio/history/Выживет только элита.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Бюро Захи Хадид.jpg" data-full="portfolio/history/Бюро Захи Хадид.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Голосіївський маніяк.jpg" data-full="portfolio/history/Голосіївський маніяк.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Их похоронили заживо.jpg" data-full="portfolio/history/Их похоронили заживо.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/крематорій.jpg" data-full="portfolio/history/крематорій.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Нацисти-мільярдери.jpg" data-full="portfolio/history/Нацисти-мільярдери.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Стоицизм не работает.jpg" data-full="portfolio/history/Стоицизм не работает.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/Сухий закон.jpg" data-full="portfolio/history/Сухий закон.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/ЧТО ОНИ СКРЫЛИ ОТ НАС.jpg" data-full="portfolio/history/ЧТО ОНИ СКРЫЛИ ОТ НАС.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/это скрывает Иерусалим2.jpg" data-full="portfolio/history/это скрывает Иерусалим2.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/nike.jpg" data-full="portfolio/history/nike.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/She had absolutely no chance.jpg" data-full="portfolio/history/She had absolutely no chance.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+                    <div class="portfolio-item" data-category="history"><img src="portfolio/thumbnails/history/The Longest Prison Sentences of ALL TIME.jpg" data-full="portfolio/history/The Longest Prison Sentences of ALL TIME.jpg" loading="lazy" alt="История"><div class="portfolio-overlay"><span class="portfolio-category">История</span></div></div>
+
+                    <!-- Health -->
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/5 причин небезпечних болей у хребті.jpg" data-full="portfolio/health/5 причин небезпечних болей у хребті.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/Революція в омолодженн2і.jpg" data-full="portfolio/health/Революція в омолодженн2і.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/ЕШЬ ЭТО.jpg" data-full="portfolio/health/ЕШЬ ЭТО.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/КАК БРОСИТЬ.jpg" data-full="portfolio/health/КАК БРОСИТЬ.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/ВИПАВ ІМПЛАТН.jpg" data-full="portfolio/health/ВИПАВ ІМПЛАТН.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/ВСЬОГО ОДИН ПРОДУКТ.jpg" data-full="portfolio/health/ВСЬОГО ОДИН ПРОДУКТ.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/Кава 7 днів.jpg" data-full="portfolio/health/Кава 7 днів.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/Не может быть!.jpg" data-full="portfolio/health/Не может быть!.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/Нік Діаз.jpg" data-full="portfolio/health/Нік Діаз.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/СОВЕТЫ ОТ ПРОФИ.jpg" data-full="portfolio/health/СОВЕТЫ ОТ ПРОФИ.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/ACL.jpg" data-full="portfolio/health/ACL.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+                    <div class="portfolio-item" data-category="health"><img src="portfolio/thumbnails/health/Get Your Sleep and Energy.jpg" data-full="portfolio/health/Get Your Sleep and Energy.jpg" loading="lazy" alt="Здоровье"><div class="portfolio-overlay"><span class="portfolio-category">Здоровье</span></div></div>
+
+                    <!-- Psychology -->
+                    <div class="portfolio-item" data-category="psychology"><img src="portfolio/thumbnails/psychology/ИГРА ПО ФИЗИОГНОМИКЕ.jpg" data-full="portfolio/psychology/ИГРА ПО ФИЗИОГНОМИКЕ.jpg" loading="lazy" alt="Психология"><div class="portfolio-overlay"><span class="portfolio-category">Психология</span></div></div>
+                    <div class="portfolio-item" data-category="psychology"><img src="portfolio/thumbnails/psychology/энергия.jpg" data-full="portfolio/psychology/энергия.jpg" loading="lazy" alt="Психология"><div class="portfolio-overlay"><span class="portfolio-category">Психология</span></div></div>
+                    <div class="portfolio-item" data-category="psychology"><img src="portfolio/thumbnails/psychology/10 законів переписки.jpg" data-full="portfolio/psychology/10 законів переписки.jpg" loading="lazy" alt="Психология"><div class="portfolio-overlay"><span class="portfolio-category">Психология</span></div></div>
+                    <div class="portfolio-item" data-category="psychology"><img src="portfolio/thumbnails/psychology/ДЕ ЗНАЙОМИТИСЬ.jpg" data-full="portfolio/psychology/ДЕ ЗНАЙОМИТИСЬ.jpg" loading="lazy" alt="Психология"><div class="portfolio-overlay"><span class="portfolio-category">Психология</span></div></div>
+                    <div class="portfolio-item" data-category="psychology"><img src="portfolio/thumbnails/psychology/Мужики не бегают за женщинами.jpg" data-full="portfolio/psychology/Мужики не бегают за женщинами.jpg" loading="lazy" alt="Психология"><div class="portfolio-overlay"><span class="portfolio-category">Психология</span></div></div>
+                    <div class="portfolio-item" data-category="psychology"><img src="portfolio/thumbnails/psychology/Перестань бути тривожним.jpg" data-full="portfolio/psychology/Перестань бути тривожним.jpg" loading="lazy" alt="Психология"><div class="portfolio-overlay"><span class="portfolio-category">Психология</span></div></div>
+                    <div class="portfolio-item" data-category="psychology"><img src="portfolio/thumbnails/psychology/Понасенков.jpg" data-full="portfolio/psychology/Понасенков.jpg" loading="lazy" alt="Психология"><div class="portfolio-overlay"><span class="portfolio-category">Психология</span></div></div>
+                    <div class="portfolio-item" data-category="psychology"><img src="portfolio/thumbnails/psychology/Your girl talks to other guys2.jpg" data-full="portfolio/psychology/Your girl talks to other guys2.jpg" loading="lazy" alt="Психология"><div class="portfolio-overlay"><span class="portfolio-category">Психология</span></div></div>
+
+                    <!-- Other -->
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/«ВІН МАНІПУЛЮЄ ТОБОЮ».jpg" data-full="portfolio/other/«ВІН МАНІПУЛЮЄ ТОБОЮ».jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/БИДЛО не еволюціонує.jpg" data-full="portfolio/other/БИДЛО не еволюціонує.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/ВАМ ВРУТ2.jpg" data-full="portfolio/other/ВАМ ВРУТ2.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Держава як Корпорація-Ви клієнт чи ресурс_.jpg" data-full="portfolio/other/Держава як Корпорація-Ви клієнт чи ресурс_.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/КРІНЖ РОКУ 2026.jpg" data-full="portfolio/other/КРІНЖ РОКУ 2026.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/ЛІЛО І СТІЧ.jpg" data-full="portfolio/other/ЛІЛО І СТІЧ.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/СВЯТКОВІ ІСТОРІЇ (2).jpg" data-full="portfolio/other/СВЯТКОВІ ІСТОРІЇ (2).jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Ти недостатньо.jpg" data-full="portfolio/other/Ти недостатньо.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Топ 3 Українські Тємки.jpg" data-full="portfolio/other/Топ 3 Українські Тємки.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/ФІФА.jpg" data-full="portfolio/other/ФІФА.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/ХТО  ТИ.jpg" data-full="portfolio/other/ХТО  ТИ.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/ШЛЯХ МАЛОРОСА.jpg" data-full="portfolio/other/ШЛЯХ МАЛОРОСА.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/BarbIQ.jpg" data-full="portfolio/other/BarbIQ.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/МЕРТВЕЦЫ ХОТЯТ ЕСТЬ3.jpg" data-full="portfolio/other/МЕРТВЕЦЫ ХОТЯТ ЕСТЬ3.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Люди vs Роботы.jpg" data-full="portfolio/other/Люди vs Роботы.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Дорослий мультик для дітей.jpg" data-full="portfolio/other/Дорослий мультик для дітей.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/змія2.jpg" data-full="portfolio/other/змія2.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/ЛЖЕПРОРОК.jpg" data-full="portfolio/other/ЛЖЕПРОРОК.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Начни понимать Английский Легко и просто2.jpg" data-full="portfolio/other/Начни понимать Английский Легко и просто2.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Обзор дома под Варшавой.jpg" data-full="portfolio/other/Обзор дома под Варшавой.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Оля Гвоздьова.jpg" data-full="portfolio/other/Оля Гвоздьова.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/руфер.jpg" data-full="portfolio/other/руфер.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/РЫБА2.jpg" data-full="portfolio/other/РЫБА2.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Stephen King2.jpg" data-full="portfolio/other/Stephen King2.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                    <div class="portfolio-item" data-category="other"><img src="portfolio/thumbnails/other/Weapons.jpg" data-full="portfolio/other/Weapons.jpg" loading="lazy" alt="Другое"><div class="portfolio-overlay"><span class="portfolio-category">Другое</span></div></div>
+                </div>
+
+                <button class="cases-expand-btn" id="show-more-btn" style="margin-top: 2rem;">
+                    <span>Показать ещё</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Home Button (Bottom) -->
+    <div style="text-align: center; padding: 2rem 0 3rem;">
+        <a href="index.html" class="btn btn-outline btn-lg" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Назад на главную
+        </a>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-backdrop"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Закрыть"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+            <button class="lightbox-nav lightbox-prev" aria-label="Предыдущее"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <div class="lightbox-image-wrapper">
+                <div class="lightbox-loader"><div class="lightbox-spinner"></div></div>
+                <img class="lightbox-image" src="" alt="Portfolio image">
+            </div>
+            <button class="lightbox-nav lightbox-next" aria-label="Следующее"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+            <div class="lightbox-counter"><span class="lightbox-current">1</span> / <span class="lightbox-total">1</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

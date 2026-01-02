@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Тарифы | Genial Design</title>
+    <meta name="description" content="Тарифы на создание обложек и названий для YouTube. Выберите подходящий вариант.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/7Pmmx4yf/image-2025-12-05-05-09-53.png">
+    <meta name="theme-color" content="#030303">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        /* Price page specific styles */
+        .price-page-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 1rem;
+            position: relative;
+        }
+        
+        .price-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .price-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.625rem;
+            margin-bottom: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .price-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .price-logo-img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.625rem;
+        }
+        
+        .price-logo-text {
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text);
+        }
+        
+        .price-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease 0.2s forwards;
+        }
+        
+        .price-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 2.5rem;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--border-light);
+            border-radius: 100px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease 0.8s forwards;
+        }
+        
+        .price-back:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateX(-5px);
+        }
+        
+        /* Section header improvements */
+        #pricing .section-header {
+            margin-bottom: 3rem;
+        }
+        
+        #pricing .section-title {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease 0.1s forwards;
+        }
+        
+        #pricing .section-subtitle {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease 0.2s forwards;
+        }
+        
+        /* Pricing grid */
+        #pricing .pricing-grid {
+            margin-bottom: 2rem;
+        }
+        
+        /* Card animations */
+        .pricing-card-new {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: cardFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        .pricing-card-new:nth-child(1) { animation-delay: 0.2s; }
+        .pricing-card-new:nth-child(2) { animation-delay: 0.35s; }
+        .pricing-card-new:nth-child(3) { animation-delay: 0.5s; }
+        
+        @keyframes cardFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Enhanced card glow on hover */
+        .pricing-card-new::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        
+        .pricing-card-new:hover::before {
+            opacity: 1;
+        }
+        
+        /* Popular card enhanced glow */
+        .popular-card::before {
+            background: linear-gradient(135deg, var(--accent), var(--cyan), var(--accent));
+            opacity: 0.5;
+        }
+        
+        .popular-card:hover::before {
+            opacity: 1;
+        }
+        
+        /* Pricing help text */
+        .pricing-help {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease 0.7s forwards;
+        }
+        
+        .pricing-help-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-help-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .pricing-help-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Guarantee badge */
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 100px;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease 0.6s forwards;
+        }
+        
+        .guarantee-badge svg {
+            flex-shrink: 0;
+        }
+        
+        /* Footer section */
+        .price-footer {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .price-page-wrapper {
+                padding: 1.5rem 1rem;
+                justify-content: flex-start;
+                padding-top: 3rem;
+            }
+            
+            .price-header {
+                margin-bottom: 2rem;
+            }
+            
+            .price-logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .price-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            #pricing .section-header {
+                margin-bottom: 2rem;
+            }
+            
+            .guarantee-badge {
+                font-size: 0.8rem;
+                padding: 0.625rem 1rem;
+            }
+            
+            .price-back {
+                margin-top: 2rem;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Hide cursor on mobile */
+        @media (max-width: 1024px) {
+            .cursor, .cursor-follower {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor (desktop only) -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Background effects -->
+    <div class="gradient-mesh"></div>
+    <div class="noise-overlay"></div>
+    <div class="grid-pattern"></div>
+    
+    <!-- Animated background orbs -->
+    <div class="bg-orbs">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+    
+    <main class="price-page-wrapper">
+        <div class="price-header">
+            <a href="/" class="price-logo" data-magnetic>
+                <img src="https://i.postimg.cc/7Pmmx4yf/image-2025-12-05-05-09-53.png" alt="Genial Design" class="price-logo-img">
+                <span class="price-logo-text">Genial<span class="accent">Design</span></span>
+            </a>
+            <p class="price-subtitle">Персональное предложение для вас</p>
+        </div>
+
+        <section class="section" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Выберите <span class="gradient-text">тариф</span></h2>
+                    <p class="section-subtitle">Каждый тариф окупается после <strong>первого видео</strong></p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Базовый тариф -->
+                    <div class="pricing-card-new glass-card">
+                        <div class="pricing-header">
+                            <div class="pricing-tier-badge-new green-badge">БАЗОВЫЙ</div>
+                            <div class="pricing-price-new">
+                                <span class="price-amount">$29</span>
+                            </div>
+                        </div>
+                        <p class="pricing-tagline-new">Идеальный старт: <strong>быстрый результат</strong> без риска</p>
+                        <ul class="pricing-features-new">
+                            <li class="feature-item">
+                                <div class="feature-icon check-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <path d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">1 обложка с <strong>максимальной</strong> проработкой</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon check-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <path d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">1 заголовок, усиливающий эффект</span>
+                            </li>
+                            <li class="feature-item bonus-item">
+                                <div class="feature-icon bonus-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M12 8v8m-4-4h8"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">+ Бонус: вариация для тестов</span>
+                            </li>
+                        </ul>
+                        <a href="https://t.me/m/oUIqO0LfZDli" target="_blank" class="pricing-btn pricing-btn-secondary btn-magnetic" data-magnetic>
+                            <span>Выбрать</span>
+                        </a>
+                    </div>
+
+                    <!-- Стандарт тариф (популярный) -->
+                    <div class="pricing-card-new popular-card glass-card">
+                        <div class="popular-badge-new">Популярный</div>
+                        <div class="pricing-header">
+                            <div class="pricing-tier-badge-new blue-badge">СТАНДАРТ</div>
+                            <div class="pricing-price-new">
+                                <span class="price-amount">$39</span>
+                            </div>
+                        </div>
+                        <p class="pricing-tagline-new">Для тех, кто хочет <strong>×2-4 просмотров</strong></p>
+                        <ul class="pricing-features-new">
+                            <li class="feature-item">
+                                <div class="feature-icon check-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <path d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">2 обложки для <strong>A/B теста</strong></span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon check-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <path d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">2 заголовка под <strong>алгоритмы</strong></span>
+                            </li>
+                            <li class="feature-item bonus-item">
+                                <div class="feature-icon bonus-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M12 8v8m-4-4h8"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">+ Бонус: вариация <strong>победителя</strong></span>
+                            </li>
+                        </ul>
+                        <a href="https://t.me/m/oUIqO0LfZDli" target="_blank" class="pricing-btn pricing-btn-primary btn-magnetic btn-glow" data-magnetic>
+                            <span>Выбрать</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Премиум тариф -->
+                    <div class="pricing-card-new glass-card">
+                        <div class="pricing-header">
+                            <div class="pricing-tier-badge-new black-badge">ПРЕМИУМ</div>
+                            <div class="pricing-price-new">
+                                <span class="price-amount">$59</span>
+                            </div>
+                        </div>
+                        <p class="pricing-tagline-new">Для <strong>топ-1</strong> в нише</p>
+                        <ul class="pricing-features-new">
+                            <li class="feature-item">
+                                <div class="feature-icon check-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <path d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">3 обложки для <strong>A/B/C теста</strong></span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon check-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <path d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">3 заголовка под <strong>максимум кликов</strong></span>
+                            </li>
+                            <li class="feature-item bonus-item">
+                                <div class="feature-icon bonus-icon">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <path d="M12 8v8m-4-4h8"/>
+                                    </svg>
+                                </div>
+                                <span class="feature-text">+ Бонус: анализ + <strong>внедрение</strong></span>
+                            </li>
+                        </ul>
+                        <a href="https://t.me/m/oUIqO0LfZDli" target="_blank" class="pricing-btn pricing-btn-secondary btn-magnetic" data-magnetic>
+                            <span>Выбрать</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="price-footer">
+                    <div class="guarantee-badge">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                        <span>100% гарантия качества</span>
+                    </div>
+                    
+                    <p class="pricing-help">
+                        Не знаете что выбрать? <a href="https://t.me/m/oUIqO0LfZDli" target="_blank" class="pricing-help-link">Напишите — подскажу</a>
+                    </p>
+
+                    <a href="/" class="price-back">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                        </svg>
+                        Вернуться на главную
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
