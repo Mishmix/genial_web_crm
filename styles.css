@@ -26,6 +26,25 @@ html, body {
     text-rendering: optimizeLegibility;
 }
 
+/* ============ 120Hz SCROLL OPTIMIZATION ============ */
+/* Enable smooth high-refresh-rate scrolling on iOS */
+@supports (-webkit-touch-callout: none) {
+    html {
+        scroll-behavior: auto; /* Let native handle it for 120Hz */
+    }
+    
+    /* Optimize touch scrolling */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Force GPU compositing for smoother animations */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /* CRITICAL: Prevent horizontal scroll on mobile */
 html {
     overscroll-behavior-x: none;
@@ -37,6 +56,8 @@ body {
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     max-width: 100vw;
+    /* Optimize for high refresh rate displays */
+    transform: translateZ(0);
 }
 
 /* Prevent any element from causing horizontal overflow */

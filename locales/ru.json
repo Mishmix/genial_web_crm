@@ -98,7 +98,15 @@
     "conclusion": "Тот же канал. Тот же автор. Та же тема. <strong>Разница — только в обложке.</strong>",
     "weakDesc": "<strong>Слабая</strong> упаковка → <strong>мало</strong> кликов",
     "strongDescPrefix": "<strong>Сильная</strong> упаковка → <strong>",
-    "strongDescSuffix": "</strong> просмотров"
+    "strongDescSuffix": "</strong> просмотров",
+    "packagingArrow": "упаковка →",
+    "viewsWord": "просмотров",
+    "case1WeakTitle": "\"ТОП 12 лучших и худших упражнений на дельты\"",
+    "case1StrongTitle": "\"Эти 6 упражнений УБИВАЮТ твои плечи. 90% тренеров их советуют\"",
+    "case2WeakTitle": "\"Самый безумный художник! Кем на самом деле был Караваджо? ft. Николай Жаринов\"",
+    "case2StrongTitle": "\"Гений или извращенец? За что 8000 человек ВОССТАЛИ против художника\"",
+    "case3WeakTitle": "\"116 OVR ПОДПИСЧИКУ И ЛОВИМ ВСЕХ КУМИРОВ В FC MOBILE\"",
+    "case3StrongTitle": "\"Прокачал ПОДПИСЧИКА ночью в FC Mobile!! Проснулся с ЛУЧШИМ СОСТАВОМ\""
   },
   "reviews": {
     "pageTitle": "Отзывы",

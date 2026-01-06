@@ -98,7 +98,15 @@
     "conclusion": "Mismo canal. Mismo creador. Mismo tema. <strong>La única diferencia — la miniatura.</strong>",
     "weakDesc": "<strong>Débil</strong> empaque → <strong>pocos</strong> clics",
     "strongDescPrefix": "<strong>Fuerte</strong> empaque → <strong>",
-    "strongDescSuffix": "</strong> visualizaciones"
+    "strongDescSuffix": "</strong> visualizaciones",
+    "packagingArrow": "empaque →",
+    "viewsWord": "visualizaciones",
+    "case1WeakTitle": "\"TOP 12 mejores y peores ejercicios para deltoides\"",
+    "case1StrongTitle": "\"Estos 6 ejercicios MATAN tus hombros. 90% de entrenadores los recomiendan\"",
+    "case2WeakTitle": "\"¡El artista más loco! ¿Quién era realmente Caravaggio? ft. Nikolai Zharinov\"",
+    "case2StrongTitle": "\"¿Genio o pervertido? Por qué 8000 personas se REBELARON contra el artista\"",
+    "case3WeakTitle": "\"116 OVR PARA SUSCRIPTOR Y ATRAPAMOS TODOS LOS ÍDOLOS EN FC MOBILE\"",
+    "case3StrongTitle": "\"¡Mejoré al SUSCRIPTOR de noche en FC Mobile!! Desperté con el MEJOR EQUIPO\""
   },
   "reviews": {
     "pageTitle": "Reseñas de",

@@ -98,7 +98,15 @@
     "conclusion": "Same channel. Same creator. Same topic. <strong>The only difference — the thumbnail.</strong>",
     "weakDesc": "<strong>Weak</strong> packaging → <strong>few</strong> clicks",
     "strongDescPrefix": "<strong>Strong</strong> packaging → <strong>",
-    "strongDescSuffix": "</strong> views"
+    "strongDescSuffix": "</strong> views",
+    "packagingArrow": "packaging →",
+    "viewsWord": "views",
+    "case1WeakTitle": "\"TOP 12 best and worst deltoid exercises\"",
+    "case1StrongTitle": "\"These 6 exercises are KILLING your shoulders. 90% of trainers recommend them\"",
+    "case2WeakTitle": "\"The craziest artist! Who was Caravaggio really? ft. Nikolai Zharinov\"",
+    "case2StrongTitle": "\"Genius or pervert? Why 8000 people REVOLTED against the artist\"",
+    "case3WeakTitle": "\"116 OVR FOR SUBSCRIBER AND CATCHING ALL IDOLS IN FC MOBILE\"",
+    "case3StrongTitle": "\"Upgraded SUBSCRIBER overnight in FC Mobile!! Woke up with the BEST TEAM\""
   },
   "reviews": {
     "pageTitle": "Client",

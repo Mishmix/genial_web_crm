@@ -177,22 +177,33 @@ let animationRunning = false;
 let megaCounterVisible = true;
 let heroVisible = true;
 
+// Delta time for smooth 120Hz animations
+let lastFrameTime = performance.now();
+let deltaTime = 0.016; // Default 60fps
+
 function registerAnimation(callback) {
     animationCallbacks.push(callback);
     if (!animationRunning) {
         animationRunning = true;
+        lastFrameTime = performance.now();
         runAnimationLoop();
     }
 }
 
 function runAnimationLoop() {
     if (!isPageVisible) {
+        lastFrameTime = performance.now();
         requestAnimationFrame(runAnimationLoop);
         return;
     }
     
+    // Calculate delta time for frame-rate independent animations
+    const now = performance.now();
+    deltaTime = Math.min((now - lastFrameTime) / 1000, 0.1); // Cap at 100ms to prevent jumps
+    lastFrameTime = now;
+    
     for (let i = 0; i < animationCallbacks.length; i++) {
-        animationCallbacks[i]();
+        animationCallbacks[i](deltaTime);
     }
     
     requestAnimationFrame(runAnimationLoop);
@@ -277,18 +288,21 @@ if (isDesktop && cursor && cursorFollower) {
         }
     }, { passive: true });
 
-    // Smooth cursor animation - unified loop
-    registerAnimation(function animateCursor() {
+    // Smooth cursor animation - unified loop with delta time for 120Hz
+    registerAnimation(function animateCursor(deltaTime) {
         if (cursorVisible) {
+            // Normalize to 60fps base (deltaTime ~16.67ms at 60fps)
+            const factor = Math.min(deltaTime / 16.67, 2);
+            
             // Main cursor - fast smooth follow
-            cursorX += (mouseX - cursorX) * 0.4;
-            cursorY += (mouseY - cursorY) * 0.4;
+            cursorX += (mouseX - cursorX) * 0.4 * factor;
+            cursorY += (mouseY - cursorY) * 0.4 * factor;
             cursor.style.left = cursorX + 'px';
             cursor.style.top = cursorY + 'px';
 
             // Follower - slightly delayed
-            followerX += (mouseX - followerX) * 0.3;
-            followerY += (mouseY - followerY) * 0.3;
+            followerX += (mouseX - followerX) * 0.3 * factor;
+            followerY += (mouseY - followerY) * 0.3 * factor;
             cursorFollower.style.left = followerX + 'px';
             cursorFollower.style.top = followerY + 'px';
         }
@@ -331,13 +345,14 @@ if (isDesktop) {
         spotlightTargetY = e.clientY;
     }, { passive: true });
     
-    // Update spotlight in animation loop - smoother and batched
-    registerAnimation(function updateSpotlight() {
+    // Update spotlight in animation loop - smoother and batched with delta time
+    registerAnimation(function updateSpotlight(deltaTime) {
         // Only update when near top of page (hero/mega visible)
         if (!megaCounterVisible && !heroVisible) return;
         
-        spotlightX += (spotlightTargetX - spotlightX) * 0.15;
-        spotlightY += (spotlightTargetY - spotlightY) * 0.15;
+        const factor = Math.min(deltaTime / 16.67, 2);
+        spotlightX += (spotlightTargetX - spotlightX) * 0.15 * factor;
+        spotlightY += (spotlightTargetY - spotlightY) * 0.15 * factor;
         spotlight.style.setProperty('--spotlight-x', spotlightX + 'px');
         spotlight.style.setProperty('--spotlight-y', spotlightY + 'px');
     });
@@ -399,11 +414,12 @@ if (particlesContainer) {
         }, { passive: true });
     }
     
-    registerAnimation(function animateGlobalParticles() {
+    registerAnimation(function animateGlobalParticles(dt) {
         // Skip when scrolled past hero/mega sections
         if (!megaCounterVisible && !heroVisible) return;
         
-        globalTime += 0.016;
+        // Use delta time for frame-rate independent animation
+        globalTime += dt || 0.016;
         
         globalParticles.forEach(p => {
             const floatX = Math.sin(globalTime * p.floatSpeedX + p.floatOffsetX) * p.floatAmplitudeX;
@@ -425,8 +441,10 @@ if (particlesContainer) {
                 }
             }
             
-            p.x += (targetX - p.x) * 0.05;
-            p.y += (targetY - p.y) * 0.05;
+            // Smooth interpolation with delta time
+            const lerpFactor = 1 - Math.pow(0.05, (dt || 0.016) * 60);
+            p.x += (targetX - p.x) * lerpFactor;
+            p.y += (targetY - p.y) * lerpFactor;
             
             p.el.style.left = p.x + '%';
             p.el.style.top = p.y + '%';
@@ -1799,11 +1817,12 @@ if (megaParticlesContainer) {
         }, { passive: true });
     }
     
-    registerAnimation(function animateMegaParticles() {
+    registerAnimation(function animateMegaParticles(dt) {
         // Skip when mega counter not visible
         if (!megaCounterVisible) return;
         
-        megaTime += 0.016;
+        // Use delta time for frame-rate independent animation
+        megaTime += dt || 0.016;
         
         megaParticles.forEach(p => {
             const floatX = Math.sin(megaTime * p.floatSpeedX + p.floatOffsetX) * p.floatAmplitudeX;
@@ -1825,8 +1844,10 @@ if (megaParticlesContainer) {
                 }
             }
             
-            p.x += (targetX - p.x) * 0.08;
-            p.y += (targetY - p.y) * 0.08;
+            // Smooth interpolation with delta time
+            const lerpFactor = 1 - Math.pow(0.08, (dt || 0.016) * 60);
+            p.x += (targetX - p.x) * lerpFactor;
+            p.y += (targetY - p.y) * lerpFactor;
             
             p.el.style.left = p.x + '%';
             p.el.style.top = p.y + '%';
