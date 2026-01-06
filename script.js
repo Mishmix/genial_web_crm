@@ -755,7 +755,7 @@ window.addEventListener('load', function() {
         var activeSlide = slides[currentIndex];
         var ctr = activeSlide.getAttribute('data-ctr');
         var views = activeSlide.getAttribute('data-views');
-        var label = activeSlide.getAttribute('data-label') || 'Рост CTR';
+        var label = activeSlide.getAttribute('data-label') || (window.i18n?.t('hero.ctrGrowth') || 'Рост CTR');
         
         animateStatChange(ctrElement, ctr);
         animateStatChange(viewsElement, views);
@@ -1518,7 +1518,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update button
             expandBtn.style.display = 'flex';
             expandBtn.classList.remove('expanded');
-            expandBtn.querySelector('span').textContent = 'Показать ещё';
+            expandBtn.querySelector('span').textContent = window.i18n?.t('clients.showMore') || 'Показать ещё';
             
             // Hide button if not enough channels
             if (totalChannels <= initialCount) {
@@ -1552,7 +1552,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (visibleCount >= totalChannels) {
                 isFullyExpanded = true;
                 expandBtn.classList.add('expanded');
-                expandBtn.querySelector('span').textContent = 'Свернуть';
+                expandBtn.querySelector('span').textContent = window.i18n?.t('clients.collapse') || 'Свернуть';
             }
         }
         
@@ -1570,7 +1570,7 @@ document.addEventListener('DOMContentLoaded', () => {
             visibleCount = initialCount;
             isFullyExpanded = false;
             expandBtn.classList.remove('expanded');
-            expandBtn.querySelector('span').textContent = 'Показать ещё';
+            expandBtn.querySelector('span').textContent = window.i18n?.t('clients.showMore') || 'Показать ещё';
         }
         
         // Initialize on load
@@ -2107,7 +2107,9 @@ if (megaScroll) {
         // Find span in button
         const btnSpan = showMoreBtn.querySelector('span');
         if (btnSpan) {
-            btnSpan.textContent = isExpanded ? 'Свернуть' : 'Показать ещё';
+            const showMoreText = window.i18n?.t('portfolio.showMore') || 'Показать ещё';
+            const collapseText = window.i18n?.t('portfolio.collapse') || 'Свернуть';
+            btnSpan.textContent = isExpanded ? collapseText : showMoreText;
         }
         // Toggle expanded class for arrow rotation
         if (isExpanded) {
@@ -2422,11 +2424,13 @@ if (megaScroll) {
     
     function updateButtonText() {
         const btnText = casesExpandBtn.querySelector('span');
+        const showMoreText = window.i18n?.t('cases.showMore') || 'Показать ещё';
+        const collapseText = window.i18n?.t('cases.collapse') || 'Свернуть';
         if (visibleCount >= cases.length) {
-            btnText.textContent = 'Свернуть';
+            btnText.textContent = collapseText;
             casesExpandBtn.classList.add('expanded');
         } else {
-            btnText.textContent = 'Показать ещё';
+            btnText.textContent = showMoreText;
             casesExpandBtn.classList.remove('expanded');
         }
     }

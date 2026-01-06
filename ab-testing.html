@@ -1107,8 +1107,8 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1 class="page-title">Как работает <span class="gradient-text">A/B-тестирование</span></h1>
-                <p class="page-subtitle">Научный подход к росту просмотров без догадок</p>
+                <h1 class="page-title"><span data-i18n="abTesting.pageTitle1">Как работает</span> <span class="gradient-text" data-i18n="abTesting.pageTitle2">A/B-тестирование</span></h1>
+                <p class="page-subtitle" data-i18n="abTesting.pageSubtitle">Научный подход к росту просмотров без догадок</p>
             </div>
         </section>
 
@@ -1126,8 +1126,8 @@
                     <div class="ab-block-icon-static">
                         <span class="ab-icon-emoji">🎰</span>
                     </div>
-                    <h2 class="ab-block-title">Если нет системы, вы играете в <span class="text-red ab-glitch" data-text="лотерею">лотерею</span></h2>
-                    <p class="ab-block-text">Большинство авторов выбирают обложку интуитивно. <em>"Мне нравится эта"</em> — и надеются. Иногда угадывают, чаще нет.</p>
+                    <h2 class="ab-block-title"><span data-i18n="abTesting.problem.title1">Если нет системы, вы играете в</span> <span class="text-red ab-glitch" data-text="лотерею" data-i18n="abTesting.problem.lottery">лотерею</span></h2>
+                    <p class="ab-block-text" data-i18n-html="abTesting.problem.text">Большинство авторов выбирают обложку интуитивно. <em>"Мне нравится эта"</em> — и надеются. Иногда угадывают, чаще нет.</p>
                     <div class="ab-dice">
                         <span class="ab-dice-item">🎲</span>
                         <span class="ab-dice-item">🎲</span>
@@ -1158,15 +1158,15 @@
                     <div class="ab-block-icon-static">
                         <span class="ab-icon-emoji">💡</span>
                     </div>
-                    <h2 class="ab-block-title">А если бы YouTube сам показал <span class="gradient-text ab-text-shimmer">какая обложка лучше?</span></h2>
-                    <p class="ab-block-text"><strong>A/B тест</strong> — это когда вы загружаете 2-3 варианта, YouTube показывает их разным зрителям и через 12-72 часа говорит: <em>"Вот эта получает на 34% больше вовлечённости"</em>.</p>
-                    <p class="ab-block-highlight ab-highlight-animated">Никаких догадок. Только факты.</p>
+                    <h2 class="ab-block-title"><span data-i18n="abTesting.solution.title1">А если бы YouTube сам показал</span> <span class="gradient-text ab-text-shimmer" data-i18n="abTesting.solution.title2">какая обложка лучше?</span></h2>
+                    <p class="ab-block-text" data-i18n-html="abTesting.solution.text"><strong>A/B тест</strong> — это когда вы загружаете 2-3 варианта, YouTube показывает их разным зрителям и через 12-72 часа говорит: <em>"Вот эта получает на 34% больше вовлечённости"</em>.</p>
+                    <p class="ab-block-highlight ab-highlight-animated" data-i18n="abTesting.solution.highlight">Никаких догадок. Только факты.</p>
                     
                     <!-- Visual: A/B Test Results - Interactive -->
                     <div class="ab-test-visual ab-test-interactive" id="ab-test-demo">
                         <div class="ab-variant ab-variant-a" data-target="32">
                             <div class="ab-variant-letter">A</div>
-                            <div class="ab-variant-label">Вариант А</div>
+                            <div class="ab-variant-label" data-i18n="abTesting.variantA">Вариант А</div>
                             <div class="ab-variant-bar">
                                 <div class="ab-variant-fill ab-fill-animated" data-width="32" style="--target-width: 32%"></div>
                             </div>
@@ -1174,7 +1174,7 @@
                         </div>
                         <div class="ab-variant ab-variant-b" data-target="55">
                             <div class="ab-variant-letter">B</div>
-                            <div class="ab-variant-label">Вариант Б</div>
+                            <div class="ab-variant-label" data-i18n="abTesting.variantB">Вариант Б</div>
                             <div class="ab-variant-bar">
                                 <div class="ab-variant-fill ab-fill-animated" data-width="55" style="--target-width: 55%"></div>
                             </div>
@@ -1182,7 +1182,7 @@
                         </div>
                         <div class="ab-variant ab-variant-c ab-winner" data-target="66">
                             <div class="ab-variant-letter ab-letter-winner">C</div>
-                            <div class="ab-variant-label">Вариант В</div>
+                            <div class="ab-variant-label" data-i18n="abTesting.variantC">Вариант В</div>
                             <div class="ab-variant-bar">
                                 <div class="ab-variant-fill ab-fill-winner ab-fill-animated" data-width="66" style="--target-width: 66%"></div>
                             </div>
@@ -1191,14 +1191,14 @@
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                 </svg>
-                                Победитель
+                                <span data-i18n="abTesting.winner">Победитель</span>
                             </div>
                         </div>
                         <div class="ab-test-arrow">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M12 5v14M5 12l7 7 7-7"/>
                             </svg>
-                            <span>YouTube выбирает лучший</span>
+                            <span data-i18n="abTesting.youtubeChooses">YouTube выбирает лучший</span>
                         </div>
                     </div>
                 </div>
@@ -1206,7 +1206,7 @@
                 <!-- Block 3: Social Proof - MrBeast -->
                 <div class="ab-block ab-proof reveal">
                     <div class="ab-proof-header">
-                        <h2 class="ab-block-title">Почему все топ-блогеры <span class="gradient-text ab-text-shimmer">тестируют каждую обложку?</span></h2>
+                        <h2 class="ab-block-title"><span data-i18n="abTesting.proof.title1">Почему все топ-блогеры</span> <span class="gradient-text ab-text-shimmer" data-i18n="abTesting.proof.title2">тестируют каждую обложку?</span></h2>
                     </div>
                     
                     <div class="ab-proof-layout">
@@ -1223,23 +1223,23 @@
                         </div>
                         
                         <div class="ab-proof-info">
-                            <p class="ab-proof-lead">Даже самый популярный блогер мира <strong class="ab-highlight-name">MrBeast</strong> не угадывает. Он загружает несколько вариантов и смотрит данные.</p>
+                            <p class="ab-proof-lead" data-i18n-html="abTesting.proof.lead">Даже самый популярный блогер мира <strong class="ab-highlight-name">MrBeast</strong> не угадывает. Он загружает несколько вариантов и смотрит данные.</p>
                             
                             <div class="ab-proof-stat-card">
                                 <div class="ab-proof-stat-value">+5%</div>
                                 <div class="ab-proof-stat-desc">
-                                    <span>вовлечённости</span>
-                                    <span class="ab-proof-stat-small">от закрытого рта на обложке</span>
+                                    <span data-i18n="abTesting.proof.engagement">вовлечённости</span>
+                                    <span class="ab-proof-stat-small" data-i18n="abTesting.proof.closedMouth">от закрытого рта на обложке</span>
                                 </div>
                             </div>
                             
-                            <p class="ab-proof-impact">Мелочь? Это <strong>миллионы просмотров</strong> разницы.</p>
+                            <p class="ab-proof-impact" data-i18n-html="abTesting.proof.impact">Мелочь? Это <strong>миллионы просмотров</strong> разницы.</p>
                             
                             <div class="ab-proof-unlock">
                                 <span class="ab-proof-unlock-icon">🔓</span>
                                 <div class="ab-proof-unlock-text">
-                                    <p>Раньше эта функция была только для топов.</p>
-                                    <p><strong>Теперь доступна всем. И я умею ей пользоваться.</strong></p>
+                                    <p data-i18n="abTesting.proof.unlock1">Раньше эта функция была только для топов.</p>
+                                    <p data-i18n-html="abTesting.proof.unlock2"><strong>Теперь доступна всем. И я умею ей пользоваться.</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -1249,8 +1249,8 @@
                 <!-- Block 4: Complete Package -->
                 <div class="ab-block ab-package reveal">
                     <div class="ab-package-glow"></div>
-                    <div class="ab-package-badge">Полный пакет</div>
-                    <h2 class="ab-block-title">Полная <span class="gradient-text ab-text-shimmer">упаковка видео</span></h2>
+                    <div class="ab-package-badge" data-i18n="abTesting.package.badge">Полный пакет</div>
+                    <h2 class="ab-block-title"><span data-i18n="abTesting.package.title1">Полная</span> <span class="gradient-text ab-text-shimmer" data-i18n="abTesting.package.title2">упаковка видео</span></h2>
                     
                     <div class="ab-package-formula ab-formula-animated">
                         <div class="ab-package-item ab-package-item-hover">
@@ -1262,8 +1262,8 @@
                                 </svg>
                             </div>
                             <div class="ab-package-text">
-                                <span class="ab-package-label">Обложка</span>
-                                <span class="ab-package-desc">привлекает взгляд</span>
+                                <span class="ab-package-label" data-i18n="abTesting.package.thumbnail">Обложка</span>
+                                <span class="ab-package-desc" data-i18n="abTesting.package.thumbnailDesc">привлекает взгляд</span>
                             </div>
                         </div>
                         <div class="ab-package-plus ab-operator-animated">+</div>
@@ -1274,8 +1274,8 @@
                                 </svg>
                             </div>
                             <div class="ab-package-text">
-                                <span class="ab-package-label">Название</span>
-                                <span class="ab-package-desc">убеждает кликнуть</span>
+                                <span class="ab-package-label" data-i18n="abTesting.package.title">Название</span>
+                                <span class="ab-package-desc" data-i18n="abTesting.package.titleDesc">убеждает кликнуть</span>
                             </div>
                         </div>
                         <div class="ab-package-plus ab-operator-animated">×</div>
@@ -1286,8 +1286,8 @@
                                 </svg>
                             </div>
                             <div class="ab-package-text">
-                                <span class="ab-package-label">A/B тест</span>
-                                <span class="ab-package-desc">находит лучшее</span>
+                                <span class="ab-package-label" data-i18n="abTesting.package.abTest">A/B тест</span>
+                                <span class="ab-package-desc" data-i18n="abTesting.package.abTestDesc">находит лучшее</span>
                             </div>
                         </div>
                         <div class="ab-package-equals ab-operator-animated">=</div>
@@ -1295,21 +1295,21 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                             </svg>
-                            <span>Рост просмотров</span>
+                            <span data-i18n="abTesting.package.result">Рост просмотров</span>
                         </div>
                     </div>
                     
                     <div class="ab-package-checklist ab-checklist-animated">
-                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> Обложка под разные триггеры (2-3 варианта)</div>
-                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> Название с максимальной кликабельностью (2-3 варианта)</div>
-                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> A/B тест обложек через YouTube</div>
-                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> A/B тест заголовков через YouTube</div>
-                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> Анализ результатов и перенос на следующие видео</div>
+                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> <span data-i18n="abTesting.package.check1">Обложка под разные триггеры (2-3 варианта)</span></div>
+                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> <span data-i18n="abTesting.package.check2">Название с максимальной кликабельностью (2-3 варианта)</span></div>
+                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> <span data-i18n="abTesting.package.check3">A/B тест обложек через YouTube</span></div>
+                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> <span data-i18n="abTesting.package.check4">A/B тест заголовков через YouTube</span></div>
+                        <div class="ab-check-item"><span class="ab-check ab-check-animated">✓</span> <span data-i18n="abTesting.package.check5">Анализ результатов и перенос на следующие видео</span></div>
                     </div>
                     
                     <div class="ab-package-bottom">
                         <div class="ab-package-bottom-line"></div>
-                        <p>Не просто <em>"сделали картинку"</em>. <strong>Система роста просмотров.</strong></p>
+                        <p data-i18n-html="abTesting.package.bottom">Не просто <em>"сделали картинку"</em>. <strong>Система роста просмотров.</strong></p>
                     </div>
                 </div>
 
@@ -1320,21 +1320,21 @@
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                             </svg>
-                            Накопительный эффект
+                            <span data-i18n="abTesting.system.badge">Накопительный эффект</span>
                         </div>
-                        <h2 class="ab-block-title">Каждый тест делает следующее видео <span class="gradient-text">сильнее</span></h2>
+                        <h2 class="ab-block-title"><span data-i18n="abTesting.system.title1">Каждый тест делает следующее видео</span> <span class="gradient-text" data-i18n="abTesting.system.title2">сильнее</span></h2>
                     </div>
                     
                     <div class="ab-system-grid">
                         <!-- Left: Text + Insight -->
                         <div class="ab-system-left">
                             <div class="ab-system-text-compact">
-                                <p>Мы не просто делаем обложку и забываем. После каждого A/B теста анализируем: <strong>что сработало?</strong></p>
-                                <p>Успешные элементы переносим на следующие проекты.</p>
+                                <p data-i18n-html="abTesting.system.text1">Мы не просто делаем обложку и забываем. После каждого A/B теста анализируем: <strong>что сработало?</strong></p>
+                                <p data-i18n="abTesting.system.text2">Успешные элементы переносим на следующие проекты.</p>
                             </div>
                             
                             <div class="ab-system-insight-compact">
-                                <p>Через 5-10 видео у вас есть <strong>формула</strong>, которая стабильно работает на <span class="text-accent">ВАШУ</span> аудиторию.</p>
+                                <p data-i18n-html="abTesting.system.insight">Через 5-10 видео у вас есть <strong>формула</strong>, которая стабильно работает на <span class="text-accent">ВАШУ</span> аудиторию.</p>
                             </div>
                         </div>
                         
@@ -1342,25 +1342,25 @@
                         <div class="ab-progress-compact">
                             <div class="ab-progress-row">
                                 <span class="ab-progress-num-sm">01</span>
-                                <span class="ab-progress-label-sm">стили → минимализм</span>
+                                <span class="ab-progress-label-sm" data-i18n="abTesting.system.step1">стили → минимализм</span>
                                 <div class="ab-progress-bar-sm"><div class="ab-progress-fill-sm" style="width: 22%"></div></div>
                                 <span class="ab-progress-val-sm">+15%</span>
                             </div>
                             <div class="ab-progress-row">
                                 <span class="ab-progress-num-sm">03</span>
-                                <span class="ab-progress-label-sm">+ шрифты → жирный</span>
+                                <span class="ab-progress-label-sm" data-i18n="abTesting.system.step2">+ шрифты → жирный</span>
                                 <div class="ab-progress-bar-sm"><div class="ab-progress-fill-sm" style="width: 40%"></div></div>
                                 <span class="ab-progress-val-sm">+27%</span>
                             </div>
                             <div class="ab-progress-row">
                                 <span class="ab-progress-num-sm">05</span>
-                                <span class="ab-progress-label-sm">+ цвета → синий</span>
+                                <span class="ab-progress-label-sm" data-i18n="abTesting.system.step3">+ цвета → синий</span>
                                 <div class="ab-progress-bar-sm"><div class="ab-progress-fill-sm" style="width: 60%"></div></div>
                                 <span class="ab-progress-val-sm">+41%</span>
                             </div>
                             <div class="ab-progress-row ab-progress-row-final">
                                 <span class="ab-progress-num-sm ab-num-final-sm">10</span>
-                                <span class="ab-progress-label-sm">🎯 формула готова</span>
+                                <span class="ab-progress-label-sm" data-i18n="abTesting.system.step4">🎯 формула готова</span>
                                 <div class="ab-progress-bar-sm"><div class="ab-progress-fill-sm ab-fill-final" style="width: 100%"></div></div>
                                 <span class="ab-progress-val-sm ab-val-accent">+68%</span>
                             </div>
@@ -1373,7 +1373,7 @@
                                 <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
                                 <polyline points="22 4 12 14.01 9 11.01"/>
                             </svg>
-                            <span>Не <em>"мне кажется красиво"</em>, а <em>"YouTube показал что это работает"</em></span>
+                            <span data-i18n-html="abTesting.system.result">Не <em>"мне кажется красиво"</em>, а <em>"YouTube показал что это работает"</em></span>
                         </div>
                     </div>
                 </div>
@@ -1384,12 +1384,12 @@
                     <div class="ab-result-equation ab-equation-animated">
                         <div class="ab-equation-item ab-eq-left">
                             <span class="ab-equation-value gradient-text ab-value-counter" data-target="5">+5%</span>
-                            <span class="ab-equation-label">удержание</span>
+                            <span class="ab-equation-label" data-i18n="abTesting.result.retention">удержание</span>
                         </div>
                         <div class="ab-equation-sign ab-sign-animated">=</div>
                         <div class="ab-equation-item ab-eq-right">
                             <span class="ab-equation-value gradient-text ab-value-counter" data-target="30">+30%</span>
-                            <span class="ab-equation-label">просмотров</span>
+                            <span class="ab-equation-label" data-i18n="abTesting.result.views">просмотров</span>
                         </div>
                     </div>
                     <div class="ab-result-visual">
@@ -1400,7 +1400,7 @@
                             <span>👁</span><span>👁</span><span>👁</span><span>👁</span><span>👁</span>
                         </div>
                     </div>
-                    <p class="ab-result-text">Это <strong>тысячи дополнительных зрителей</strong> с КАЖДОГО видео.<br>Без изменения контента.</p>
+                    <p class="ab-result-text" data-i18n-html="abTesting.result.text">Это <strong>тысячи дополнительных зрителей</strong> с КАЖДОГО видео.<br>Без изменения контента.</p>
                 </div>
 
             </div>

@@ -23,7 +23,8 @@
     "ctr": "CTR",
     "views": "Views",
     "viewsGrowth": "View growth",
-    "channels": "+500 channels"
+    "channels": "+500 channels",
+    "ctrGrowth": "CTR Growth"
   },
   "clients": {
     "title": "Creating thumbnails for top YouTubers",
@@ -128,38 +129,71 @@
     "channelGrowth": "Channel growth"
   },
   "abTesting": {
-    "pageTitle": "YouTube Thumbnail A/B Testing",
+    "pageTitle1": "How",
+    "pageTitle2": "A/B Testing works",
     "pageSubtitle": "Scientific approach to view growth without guessing",
-    "problemTitle": "Problem: you're <span class=\"text-red\">guessing</span>",
-    "problemText": "Most creators choose thumbnails <em>intuitively</em>. But intuition is a gamble. You don't know what works until you test it.",
-    "solutionTitle": "Solution: <span class=\"gradient-text\">test it</span>",
-    "solutionText": "YouTube lets you upload multiple thumbnails and automatically picks the winner by CTR. It's not guessing — it's <strong>data</strong>.",
+    "problem": {
+      "title1": "Without a system, you're playing",
+      "lottery": "lottery",
+      "text": "Most creators choose thumbnails intuitively. <em>\"I like this one\"</em> — and hope. Sometimes they guess right, usually not."
+    },
+    "solution": {
+      "title1": "What if YouTube itself showed",
+      "title2": "which thumbnail is better?",
+      "text": "<strong>A/B test</strong> — you upload 2-3 variants, YouTube shows them to different viewers and after 12-72 hours says: <em>\"This one gets 34% more engagement\"</em>.",
+      "highlight": "No guessing. Just facts."
+    },
     "variantA": "Variant A",
     "variantB": "Variant B",
     "variantC": "Variant C",
-    "winnerSelected": "Winner selected by data",
-    "packageTitle": "What you get",
-    "packageItem1": "Thumbnail",
-    "packageItem1Desc": "Algorithm-optimized design",
-    "packageItem2": "Title",
-    "packageItem2Desc": "CTR-focused copywriting",
-    "packageItem3": "A/B Test",
-    "packageItem3Desc": "Variants for testing",
-    "packageResult": "View growth",
-    "packageCheck1": "Analysis of your niche and competitors",
-    "packageCheck2": "Design based on click psychology",
-    "packageCheck3": "Titles that hook viewers",
-    "packageCheck4": "Variants for A/B testing",
-    "packageBottom": "Not just an image — <strong>a growth system</strong>",
-    "systemTitle": "How it works",
-    "systemStep1": "Analysis",
-    "systemStep2": "Design",
-    "systemStep3": "Test",
-    "systemStep4": "Winner",
-    "resultTitle": "Result",
-    "resultText": "Average CTR growth for clients after implementing the system",
-    "guaranteeTitle": "Results guaranteed",
-    "guaranteeText": "If CTR doesn't grow — full refund. No questions asked."
+    "winner": "Winner",
+    "youtubeChooses": "YouTube picks the best",
+    "proof": {
+      "title1": "Why do all top creators",
+      "title2": "test every thumbnail?",
+      "lead": "Even the world's most popular creator <strong class=\"ab-highlight-name\">MrBeast</strong> doesn't guess. He uploads multiple variants and looks at the data.",
+      "engagement": "engagement",
+      "closedMouth": "from closed mouth on thumbnail",
+      "impact": "Small detail? That's <strong>millions of views</strong> difference.",
+      "unlock1": "This feature used to be only for top creators.",
+      "unlock2": "<strong>Now it's available to everyone. And I know how to use it.</strong>"
+    },
+    "package": {
+      "badge": "Full Package",
+      "title1": "Complete",
+      "title2": "video packaging",
+      "thumbnail": "Thumbnail",
+      "thumbnailDesc": "catches the eye",
+      "title": "Title",
+      "titleDesc": "convinces to click",
+      "abTest": "A/B Test",
+      "abTestDesc": "finds the best",
+      "result": "View growth",
+      "check1": "Thumbnails for different triggers (2-3 variants)",
+      "check2": "Titles with maximum clickability (2-3 variants)",
+      "check3": "A/B testing thumbnails via YouTube",
+      "check4": "A/B testing titles via YouTube",
+      "check5": "Results analysis and transfer to next videos",
+      "bottom": "Not just <em>\"made a picture\"</em>. <strong>A view growth system.</strong>"
+    },
+    "system": {
+      "badge": "Cumulative effect",
+      "title1": "Each test makes the next video",
+      "title2": "stronger",
+      "text1": "We don't just make a thumbnail and forget. After each A/B test we analyze: <strong>what worked?</strong>",
+      "text2": "Successful elements transfer to next projects.",
+      "insight": "After 5-10 videos you have a <strong>formula</strong> that consistently works for <span class=\"text-accent\">YOUR</span> audience.",
+      "step1": "styles → minimalism",
+      "step2": "+ fonts → bold",
+      "step3": "+ colors → blue",
+      "step4": "🎯 formula ready",
+      "result": "Not <em>\"I think it looks nice\"</em>, but <em>\"YouTube showed this works\"</em>"
+    },
+    "result": {
+      "retention": "retention",
+      "views": "views",
+      "text": "That's <strong>thousands of extra viewers</strong> from EVERY video.<br>Without changing content."
+    }
   },
   "faq": {
     "pageTitle": "Frequently Asked",

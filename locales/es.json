@@ -23,7 +23,8 @@
     "ctr": "CTR",
     "views": "Visualizaciones",
     "viewsGrowth": "Crecimiento de vistas",
-    "channels": "+500 canales"
+    "channels": "+500 canales",
+    "ctrGrowth": "Crecimiento CTR"
   },
   "clients": {
     "title": "Creo miniaturas para los mejores YouTubers",
@@ -128,38 +129,71 @@
     "channelGrowth": "Crecimiento del canal"
   },
   "abTesting": {
-    "pageTitle": "Pruebas A/B de Miniaturas YouTube",
+    "pageTitle1": "Cómo funciona",
+    "pageTitle2": "el A/B Testing",
     "pageSubtitle": "Enfoque científico para el crecimiento de vistas sin adivinar",
-    "problemTitle": "Problema: estás <span class=\"text-red\">adivinando</span>",
-    "problemText": "La mayoría de los creadores eligen miniaturas <em>intuitivamente</em>. Pero la intuición es una apuesta. No sabes qué funciona hasta que lo pruebas.",
-    "solutionTitle": "Solución: <span class=\"gradient-text\">pruébalo</span>",
-    "solutionText": "YouTube te permite subir múltiples miniaturas y elige automáticamente el ganador por CTR. No son suposiciones — son <strong>datos</strong>.",
+    "problem": {
+      "title1": "Sin un sistema, estás jugando a la",
+      "lottery": "lotería",
+      "text": "La mayoría de los creadores eligen miniaturas intuitivamente. <em>\"Me gusta esta\"</em> — y esperan. A veces aciertan, generalmente no."
+    },
+    "solution": {
+      "title1": "¿Y si YouTube mismo mostrara",
+      "title2": "qué miniatura es mejor?",
+      "text": "<strong>A/B test</strong> — subes 2-3 variantes, YouTube las muestra a diferentes espectadores y después de 12-72 horas dice: <em>\"Esta obtiene 34% más engagement\"</em>.",
+      "highlight": "Sin suposiciones. Solo hechos."
+    },
     "variantA": "Variante A",
     "variantB": "Variante B",
     "variantC": "Variante C",
-    "winnerSelected": "Ganador seleccionado por datos",
-    "packageTitle": "Lo que obtienes",
-    "packageItem1": "Miniatura",
-    "packageItem1Desc": "Diseño optimizado para algoritmos",
-    "packageItem2": "Título",
-    "packageItem2Desc": "Copywriting enfocado en CTR",
-    "packageItem3": "Prueba A/B",
-    "packageItem3Desc": "Variantes para testing",
-    "packageResult": "Crecimiento de vistas",
-    "packageCheck1": "Análisis de tu nicho y competidores",
-    "packageCheck2": "Diseño basado en psicología del clic",
-    "packageCheck3": "Títulos que enganchan",
-    "packageCheck4": "Variantes para pruebas A/B",
-    "packageBottom": "No solo una imagen — <strong>un sistema de crecimiento</strong>",
-    "systemTitle": "Cómo funciona",
-    "systemStep1": "Análisis",
-    "systemStep2": "Diseño",
-    "systemStep3": "Prueba",
-    "systemStep4": "Ganador",
-    "resultTitle": "Resultado",
-    "resultText": "Crecimiento promedio de CTR para clientes después de implementar el sistema",
-    "guaranteeTitle": "Resultados garantizados",
-    "guaranteeText": "Si el CTR no crece — reembolso completo. Sin preguntas."
+    "winner": "Ganador",
+    "youtubeChooses": "YouTube elige el mejor",
+    "proof": {
+      "title1": "¿Por qué todos los top creadores",
+      "title2": "prueban cada miniatura?",
+      "lead": "Incluso el creador más popular del mundo <strong class=\"ab-highlight-name\">MrBeast</strong> no adivina. Sube múltiples variantes y mira los datos.",
+      "engagement": "engagement",
+      "closedMouth": "por boca cerrada en miniatura",
+      "impact": "¿Pequeño detalle? Son <strong>millones de vistas</strong> de diferencia.",
+      "unlock1": "Antes esta función era solo para los top.",
+      "unlock2": "<strong>Ahora está disponible para todos. Y sé cómo usarla.</strong>"
+    },
+    "package": {
+      "badge": "Paquete Completo",
+      "title1": "Empaquetado",
+      "title2": "completo del video",
+      "thumbnail": "Miniatura",
+      "thumbnailDesc": "capta la atención",
+      "title": "Título",
+      "titleDesc": "convence a hacer clic",
+      "abTest": "A/B Test",
+      "abTestDesc": "encuentra lo mejor",
+      "result": "Crecimiento de vistas",
+      "check1": "Miniaturas para diferentes triggers (2-3 variantes)",
+      "check2": "Títulos con máxima clickabilidad (2-3 variantes)",
+      "check3": "A/B testing de miniaturas vía YouTube",
+      "check4": "A/B testing de títulos vía YouTube",
+      "check5": "Análisis de resultados y transferencia a próximos videos",
+      "bottom": "No solo <em>\"hicimos una imagen\"</em>. <strong>Un sistema de crecimiento de vistas.</strong>"
+    },
+    "system": {
+      "badge": "Efecto acumulativo",
+      "title1": "Cada prueba hace el siguiente video",
+      "title2": "más fuerte",
+      "text1": "No solo hacemos una miniatura y olvidamos. Después de cada A/B test analizamos: <strong>¿qué funcionó?</strong>",
+      "text2": "Los elementos exitosos se transfieren a los próximos proyectos.",
+      "insight": "Después de 5-10 videos tienes una <strong>fórmula</strong> que funciona consistentemente para <span class=\"text-accent\">TU</span> audiencia.",
+      "step1": "estilos → minimalismo",
+      "step2": "+ fuentes → negrita",
+      "step3": "+ colores → azul",
+      "step4": "🎯 fórmula lista",
+      "result": "No <em>\"creo que se ve bien\"</em>, sino <em>\"YouTube mostró que esto funciona\"</em>"
+    },
+    "result": {
+      "retention": "retención",
+      "views": "vistas",
+      "text": "Son <strong>miles de espectadores adicionales</strong> de CADA video.<br>Sin cambiar el contenido."
+    }
   },
   "faq": {
     "pageTitle": "Preguntas",
