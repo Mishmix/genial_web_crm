@@ -4,6 +4,14 @@ document.addEventListener('visibilitychange', () => {
     isPageVisible = !document.hidden;
 });
 
+// ============ HAPTIC FEEDBACK HELPER ============
+// Uses window.haptic from i18n.js (Telegram WebApp)
+function triggerHaptic(type = 'light') {
+    if (typeof window.haptic === 'function') {
+        window.haptic(type);
+    }
+}
+
 // ============ PORTFOLIO LIGHTBOX ============
 (function initLightbox() {
     const lightbox = document.getElementById('lightbox');
@@ -87,10 +95,22 @@ document.addEventListener('visibilitychange', () => {
     }
     
     // Event listeners
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightboxBackdrop.addEventListener('click', closeLightbox);
-    lightboxPrev.addEventListener('click', () => navigate(-1));
-    lightboxNext.addEventListener('click', () => navigate(1));
+    lightboxClose.addEventListener('click', () => {
+        triggerHaptic('light');
+        closeLightbox();
+    });
+    lightboxBackdrop.addEventListener('click', () => {
+        triggerHaptic('light');
+        closeLightbox();
+    });
+    lightboxPrev.addEventListener('click', () => {
+        triggerHaptic('selection');
+        navigate(-1);
+    });
+    lightboxNext.addEventListener('click', () => {
+        triggerHaptic('selection');
+        navigate(1);
+    });
     
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -121,6 +141,8 @@ document.addEventListener('visibilitychange', () => {
     document.addEventListener('click', (e) => {
         const portfolioItem = e.target.closest('.portfolio-item');
         if (!portfolioItem) return;
+        
+        triggerHaptic('light');
         
         const img = portfolioItem.querySelector('img');
         if (!img) return;
@@ -506,6 +528,7 @@ if (backToTop) {
     }, 100), { passive: true });
 
     backToTop.addEventListener('click', () => {
+        triggerHaptic('light');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
@@ -547,6 +570,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
+        triggerHaptic('light');
         mobileMenuBtn.classList.toggle('active');
         mobileMenu.classList.toggle('active');
         document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
@@ -554,6 +578,7 @@ if (mobileMenuBtn && mobileMenu) {
 
     document.querySelectorAll('.mobile-nav-link, .mobile-cta-btn').forEach(link => {
         link.addEventListener('click', () => {
+            triggerHaptic('selection');
             mobileMenuBtn.classList.remove('active');
             mobileMenu.classList.remove('active');
             document.body.style.overflow = '';
@@ -797,6 +822,7 @@ window.addEventListener('load', function() {
     // Click on slides
     slides.forEach(function(slide) {
         slide.addEventListener('click', function() {
+            triggerHaptic('selection');
             var index = parseInt(slide.getAttribute('data-index'));
             if (index === getPrevIndex()) {
                 prevSlide();
@@ -809,6 +835,7 @@ window.addEventListener('load', function() {
     // Click on dots
     dots.forEach(function(dot) {
         dot.addEventListener('click', function() {
+            triggerHaptic('selection');
             var index = parseInt(dot.getAttribute('data-index'));
             goToSlide(index);
         });
@@ -1070,6 +1097,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
     const question = item.querySelector('.faq-question');
 
     question.addEventListener('click', () => {
+        triggerHaptic('light');
         const isActive = item.classList.contains('active');
 
         document.querySelectorAll('.faq-item').forEach(i => {
@@ -1085,6 +1113,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
 // ============ SMOOTH SCROLL ============
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+        triggerHaptic('light');
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -1199,6 +1228,7 @@ const rippleButtons = document.querySelectorAll('.btn');
 
 rippleButtons.forEach(btn => {
     btn.addEventListener('click', function(e) {
+        triggerHaptic('light');
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -1557,6 +1587,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         expandBtn.addEventListener('click', () => {
+            triggerHaptic('light');
             if (isFullyExpanded) {
                 collapseChannels();
             } else {
@@ -1903,6 +1934,7 @@ if (fluidCanvas && counterWrapper && isDesktop) {
 const megaScroll = document.getElementById('mega-scroll');
 if (megaScroll) {
     megaScroll.addEventListener('click', () => {
+        triggerHaptic('light');
         const heroSection = document.getElementById('hero');
         if (heroSection) {
             heroSection.scrollIntoView({ behavior: 'smooth' });
@@ -2162,6 +2194,7 @@ if (megaScroll) {
     
     // Show more / Collapse button click
     showMoreBtn.addEventListener('click', () => {
+        triggerHaptic('light');
         if (isExpanded) {
             // Collapse
             collapsePortfolio();
@@ -2225,6 +2258,7 @@ if (megaScroll) {
     // Filter buttons
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
+            triggerHaptic('selection');
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
@@ -2398,6 +2432,7 @@ if (megaScroll) {
     }
     
     casesExpandBtn.addEventListener('click', () => {
+        triggerHaptic('light');
         if (visibleCount >= cases.length) {
             // Collapse back to initial
             visibleCount = getInitialShow();

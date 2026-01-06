@@ -91,7 +91,13 @@
     "tagTravel": "Viajes",
     "tagEducation": "Educación",
     "tagCrypto": "Cripto",
-    "tagPsychology": "Psicología"
+    "tagPsychology": "Psicología",
+    "tagTech": "Reseña Tech",
+    "tagLifestyle": "Lifestyle",
+    "conclusion": "Mismo canal. Mismo creador. Mismo tema. <strong>La única diferencia — la miniatura.</strong>",
+    "weakDesc": "<strong>Débil</strong> empaque → <strong>pocos</strong> clics",
+    "strongDescPrefix": "<strong>Fuerte</strong> empaque → <strong>",
+    "strongDescSuffix": "</strong> visualizaciones"
   },
   "reviews": {
     "pageTitle": "Reseñas de",

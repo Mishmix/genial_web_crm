@@ -91,7 +91,13 @@
     "tagTravel": "Travel",
     "tagEducation": "Education",
     "tagCrypto": "Crypto",
-    "tagPsychology": "Psychology"
+    "tagPsychology": "Psychology",
+    "tagTech": "Tech Review",
+    "tagLifestyle": "Lifestyle",
+    "conclusion": "Same channel. Same creator. Same topic. <strong>The only difference — the thumbnail.</strong>",
+    "weakDesc": "<strong>Weak</strong> packaging → <strong>few</strong> clicks",
+    "strongDescPrefix": "<strong>Strong</strong> packaging → <strong>",
+    "strongDescSuffix": "</strong> views"
   },
   "reviews": {
     "pageTitle": "Client",

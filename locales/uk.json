@@ -91,7 +91,13 @@
     "tagTravel": "Подорожі",
     "tagEducation": "Освіта",
     "tagCrypto": "Криптовалюта",
-    "tagPsychology": "Психологія"
+    "tagPsychology": "Психологія",
+    "tagTech": "Огляд техніки",
+    "tagLifestyle": "Lifestyle",
+    "conclusion": "Той самий канал. Той самий автор. Та сама тема. <strong>Різниця — лише в обкладинці.</strong>",
+    "weakDesc": "<strong>Слабка</strong> упаковка → <strong>мало</strong> кліків",
+    "strongDescPrefix": "<strong>Сильна</strong> упаковка → <strong>",
+    "strongDescSuffix": "</strong> переглядів"
   },
   "reviews": {
     "pageTitle": "Відгуки",
